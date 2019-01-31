@@ -10,8 +10,7 @@ import middleware from './middleware'
 //Initialize store with reducer and middleware
 const store = createStore(reducer,middleware)
 
-//Initialize app with Provider and connect for accessing store across the application
-//This avoids passing the store to the child components
+//The Provider component (which comes from the react-redux package) makes it possible for all components to access the store via the connect function.
 ReactDOM.render(
   <Provider store={store}>
     <App />
