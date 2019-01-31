@@ -8,6 +8,7 @@
     "react-icons": "^3.3.0",
     "react-redux": "^6.0.0",
     "react-scripts": "1.1.1",
+    "react-spinners": "^0.5.1",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
   },

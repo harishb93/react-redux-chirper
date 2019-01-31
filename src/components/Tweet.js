@@ -11,7 +11,7 @@ class Tweet extends Component{
   }
 
   handleLike = (e) => {
-    e.preventDefault
+    e.preventDefault()
     // TODO: Handle like tweet
   }
 
