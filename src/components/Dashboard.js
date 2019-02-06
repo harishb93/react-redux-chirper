@@ -3,8 +3,8 @@ import {connect} from 'react-redux'
 import Tweet from './Tweet'
 
 class Dashboard extends Component{
+  //Show all tweets with id passed as props
   render(){
-
     return (
       <div>
         <h3 className='center'>Your Timeline</h3>

@@ -10,6 +10,7 @@ class NewTweet extends Component {
     toHome: false
   }
 
+  //Change state for change in text within the TextArea
   handleChange = (e)=> {
     const text=e.target.value
     this.setState(() => ({
@@ -17,6 +18,7 @@ class NewTweet extends Component {
     }))
   }
 
+  //On Submit, get the tweet info and pass the replyingTo id, if any, to handleAddTweet thunk and set navigation to home
   handleSubmit = (e) => {
     e.preventDefault()
     const {text} = this.state
@@ -34,7 +36,8 @@ class NewTweet extends Component {
 
     const {text,toHome} = this.state
 
-    if(toHome == true){
+    //If set to true, redirect to home page
+    if(toHome === true){
       return <Redirect to='/'/>
     }
 

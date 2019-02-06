@@ -4,6 +4,7 @@ import Tweet from './Tweet'
 import NewTweet from './NewTweet'
 
 class TweetPage extends Component{
+  //Render the tweet, NewTweet for replying and the replies if any - The id field is passed from parent component
   render(){
     const {id,replies} = this.props
 
@@ -24,7 +25,7 @@ class TweetPage extends Component{
   }
 }
 
-//mapStateToProps has two parameters here - State it needs from the store and the ownProps which is passed from Parent Component
+//mapStateToProps has two parameters here - State it needs from the store and the props which is passed from Parent Component
 function mapStateToProps({authedUser, tweets, users}, props){
   const {id} = props.match.params
   return {

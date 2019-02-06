@@ -12,6 +12,7 @@ class App extends Component {
   componentDidMount(){
     this.props.dispatch(handleInitialData())
   }
+  //Handle routing/page navigation
   render() {
     return (
       <Router>
@@ -31,7 +32,6 @@ class App extends Component {
           </div>
         </Fragment>
       </Router>
-
     )
   }
 }

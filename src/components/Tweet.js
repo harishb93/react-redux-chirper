@@ -7,11 +7,13 @@ import {Link , withRouter} from 'react-router-dom'
 
 class Tweet extends Component{
 
+  //To Navigate to the Parent Tweet(Tweet replied to)
   toParent = (e, id) => {
     e.preventDefault()
     this.props.history.push(`/tweet/${id}`)
   }
 
+  //To Handle the like button toggle
   handleLike = (e) => {
     e.preventDefault()
 
@@ -67,7 +69,7 @@ class Tweet extends Component{
   }
 }
 
-//mapStateToProps has two parameters here - State it needs from the store and the ownProps which is passed from Parent Component
+//mapStateToProps has two parameters here - State it needs from the store and the props which is passed from Parent Component
 function mapStateToProps({authedUser, users,tweets}, {id}){
   const tweet = tweets[id]
   const parentTweet = tweet ? tweets[tweet.replyingTo]: null
