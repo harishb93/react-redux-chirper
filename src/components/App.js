@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import handleInitialData from '../actions/shared'
 import Dashboard from './Dashboard'
+import NewTweet from './NewTweet'
+import TweetPage from './TweetPage'
 import { SyncLoader } from 'react-spinners';
+
 
 class App extends Component {
   componentDidMount(){
@@ -11,11 +14,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        { this.props.loading === true ?
-          <div style={{position:'fixed',top:'50%', left:'50%'}} >
+        { this.props.loading === true
+          ? <div style={{position:'fixed',top:'50%', left:'50%'}} >
             <SyncLoader color='#3B84E1'/>
-          </div> :
-          <Dashboard/>
+          </div>
+          : <TweetPage match={{params: {id:'2mb6re13q842wu8n106bhk'}}}/>
         }
       </div>
     )
